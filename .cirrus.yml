@@ -22,7 +22,7 @@ task:
     - cabal update
     # For some reason the job fails with -O2 optimization level,
     # probably because of lack of disk space.
-    - cabal test --test-show-details=direct --ghc-options='-O1'
+    - cabal test --test-show-details=direct --ghc-options='-O0' -j1
 
 task:
   name: NetBSD
